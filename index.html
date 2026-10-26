@@ -3,15 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KasirKu POS — aplikasi kasir untuk mengelola produk, stok, transaksi, pelanggan, dan laporan.">
   <title>KasirKu POS</title>
+  <style>
+    :root {
+      --green-900: #1f4938;
+      --green-700: #176b50;
+      --green-600: #1a8a63;
+      --green-50: #ecfdf5;
+      --slate-800: #1e293b;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-100: #f1f5f9;
+      --white: #ffffff;
+      --radius: 16px;
+      --shadow: 0 10px 40px rgba(31, 73, 56, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(160deg, var(--green-50) 0%, #f8fafc 45%, #eef2ff 100%);
+      color: var(--slate-800);
+      min-height: 100vh;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px 36px;
+      border: 1px solid rgba(31, 73, 56, 0.06);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-50);
+      color: var(--green-700);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--green-600);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      color: var(--green-900);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--slate-600);
+      margin-bottom: 20px;
+    }
+
+    .note {
+      background: var(--slate-100);
+      border-left: 4px solid var(--green-600);
+      padding: 14px 16px;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.95rem;
+      color: var(--slate-600);
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-700);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    a.btn:hover {
+      background: var(--green-900);
+      transform: translateY(-1px);
+    }
+
+    a.btn:active {
+      transform: translateY(0);
+    }
+
+    .contact {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+      color: var(--slate-500);
+    }
+
+    .contact a {
+      color: var(--green-700);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: var(--slate-500);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 28px 22px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>KasirKu POS</h1>
-  <p>Aplikasi kasir untuk membantu usaha mengelola
-  produk, stok, transaksi, pelanggan, dan laporan.</p>
-  <p>Data usaha tersimpan di perangkat pengguna.
-  Pengguna dapat membuat backup ke Google Drive miliknya.</p>
-  <p><a href="privacy.html">Kebijakan Privasi</a></p>
-  <p>Kontak: brilliancw06@gmail.com</p>
+  <div class="wrap">
+    <article class="card">
+      <span class="badge">Aplikasi Kasir</span>
+      <h1>KasirKu POS</h1>
+      <p class="lead">
+        Aplikasi kasir untuk membantu usaha mengelola produk, stok,
+        transaksi, pelanggan, dan laporan.
+      </p>
+      <p class="note">
+        Data usaha tersimpan di perangkat pengguna.
+        Pengguna dapat membuat backup ke Google Drive miliknya.
+      </p>
+      <div class="actions">
+        <a class="btn" href="privacy.html">Kebijakan Privasi</a>
+      </div>
+      <p class="contact">
+        Kontak:
+        <a href="mailto:brilliancw06@gmail.com">brilliancw06@gmail.com</a>
+      </p>
+    </article>
+  </div>
+  <footer>
+    &copy; 2026 KasirKu POS
+  </footer>
 </body>
 </html>
